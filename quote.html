@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="theme-switch-container">
+      <label class="theme-slider" for="checkbox">
+        <input type="checkbox" id="checkbox" onclick="switchTheme()" />
+        <div class="round slider"></div>
+      </label>
+    </div>
+    <div class="main">
+      <div class="quotebox">
+        <h1>Quote of the Day</h1>
+        <div class="category_choice">
+          <div>
+            <input type="radio" name="category" id="science" onclick="displayText()" checked/>Science
+            <input type="radio" name="category" id="memes" onclick="displayText()"/>Memes
+          </div>
+          <div>
+            <input type="radio" name="category" id="inspirational" onclick="displayText()" />Inspirational
+            <input type="radio" name="category" id="anime" onclick="displayText()"/> Amime
+          </div>
+        </div>
+        <p id="quote">
+            <script>displayText()</script>
+        </p>
+        <!-- <span class="writer">- Me</span> -->
+      </div>
+      <div class="footer">
+        <div class="qbtns">
+          <button class="qbtn" id="increaseButton" onclick="increase()">+</button>
+          <button class="qbtn" id="decreaseButton" onclick="decrease()">-</button>
+        </div>
+        <button class="btn" onclick="prevQuote()">Prev</button>
+        <button class="btn" onclick="ranQuote()">Random</button>
+        <button class="btn" onclick="nextQuote()">Next</button>
+      </div>
+    </div>
+  </body>
+</html>
